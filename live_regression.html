@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chart.js Scatter Plot with Fit Line and Polynomial Fit</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+<style>
+  #plot {
+    max-width: 700px;
+    max-height: 500px;
+    cursor: crosshair;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #controls {
+    margin-bottom: 10px;
+  }
+  #clearBtn {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+  #fitMethod {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+<h1>Live regression</h1>
+<div style="display: flex; align-items: flex-start; gap: 16px;">
+<canvas id="plot"></canvas>
+<div id="statsBox" style="
+  padding: 8px;
+  height: 100px;
+  margin-left: 20px;
+  width: 180px;
+  font-family: sans-serif;
+  font-size: 13px;
+  background-color: #f4f4f4;
+"></div>
+</div>
+
+<div id="controls">
+  <label for="fitMethod">Fit method: </label>
+  <select id="fitMethod">
+    <option value="linear" selected>Linear</option>
+    <option value="cubic">Cubic Polynomial</option>
+  </select>
+  <button id="clearBtn">Clear Plot</button>
+</div>
+
+<script src="dist/plotting.js"></script>
+
+</body>
+</html>
